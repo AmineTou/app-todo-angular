@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html ng-app="TodoApp">
 <head>
-    <link href="style.css" rel="stylesheet">
-    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
 </head>
 
 <body ng-controller="TodoCtrl">
 <div>
-    <h4>My Todo List</h4>
-    <div id="list-container">
-    <table class="table table-hover table-striped table-bordered todolist">
-        <tr ng-repeat="todo in Todos.record" id="row_{{todo.id}}">
-            <td><a ng-click="deleteItem()"><i class="icon icon-minus-sign"></i></a></td>
-            <td ng-class="{strike:todo.complete}" id="item_{{todo.id}}" style="width:100%" ng-click="updateItem()"><b>{{todo.name}}</b></td>
-        </tr>
-    </table>
-    </div>
-    <input type="text" placeholder="Add Item" ng-model="todo.name"/><br/>
-    <button ng-show="action == 'Add'" class="btn btn-primary" ng-click="addItem()">Add Item</button>
+	<h4>My Todo List</h4>
+
+	<div id="list-container">
+		<table class="table table-hover table-striped table-bordered todolist">
+			<tr ng-repeat="todo in Todos.record" id="row_{{todo.id}}">
+				<td><a ng-click="deleteItem()"><i class="icon icon-minus-sign"></i></a></td>
+				<td ng-class="{strike:todo.complete}" id="item_{{todo.id}}" style="width:100%" ng-click="updateItem()"><b>{{todo.name}}</b></td>
+			</tr>
+		</table>
+	</div>
+	<input type="text" placeholder="Add Item" ng-model="todo.name" />
+	<br />
+	<button ng-show="action == 'Add'" class="btn btn-primary" ng-click="addItem()">Add Item</button>
 </div>
-<br/>
+<br />
 <h4>View the source for this application</h4>
 
 <div id="source">
-    <ul class="nav nav-tabs">
-        <li><a href="#html" data-toggle="tab">HTML</a></li>
-        <li><a href="#javascript" data-toggle="tab">Javascript</a></li>
-        <li><a href="#css" data-toggle="tab">CSS</a></li>
-    </ul>
-    <div class="tab-content">
-        <div class="tab-pane" active id="html">
+	<ul class="nav nav-tabs">
+		<li><a href="#html" data-toggle="tab">HTML</a></li>
+		<li><a href="#javascript" data-toggle="tab">Javascript</a></li>
+		<li><a href="#css" data-toggle="tab">CSS</a></li>
+	</ul>
+	<div class="tab-content">
+		<div class="tab-pane" active id="html">
                 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html ng-app="TodoApp"&gt;
 &lt;head&gt;
     &lt;link href="style.css" rel="stylesheet"&gt;
-    &lt;link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet"&gt;
-    &lt;link href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet"&gt;
+    &lt;link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet"&gt;
+    &lt;link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet"&gt;
 &lt;/head&gt;
 
 &lt;body ng-controller="TodoCtrl"&gt;
@@ -54,16 +56,16 @@
     &lt;input type="text" placeholder="Add Item" ng-model="todo.name"/&gt;&lt;br/&gt;
     &lt;button ng-show="action == 'Add'" class="btn btn-primary" ng-click="addItem()"&gt;Add Item&lt;/button&gt;
 &lt;/div&gt;
-&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"&gt;&lt;/script&gt;
 &lt;script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"&gt;&lt;/script&gt;
-&lt;script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.js"&gt;&lt;/script&gt;
-&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular-resource.min.js"&gt;&lt;/script&gt;
+&lt;script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.js"&gt;&lt;/script&gt;
+&lt;script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular-resource.min.js"&gt;&lt;/script&gt;
 &lt;script src="app.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
                 </pre>
-        </div>
-        <div class="tab-pane" id="javascript">
+		</div>
+		<div class="tab-pane" id="javascript">
             <pre>
 var TodoApp = angular.module("TodoApp", ["ngResource"]).
     config(function ($routeProvider) {
@@ -131,8 +133,8 @@ var updateByAttr = function(arr, attr1, value1, newRecord){
 
 
             </pre>
-        </div>
-        <div class="tab-pane" id="css">
+		</div>
+		<div class="tab-pane" id="css">
             <pre>
 body{
     padding:20px;
@@ -145,15 +147,15 @@ body{
     overflow:auto;
 }
             </pre>
-        </div>
-    </div>
+		</div>
+	</div>
 
 </div>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular-resource.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular-resource.min.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
