@@ -1,0 +1,13 @@
+body{
+    padding:20px;
+}
+.todolist span{
+    color:#777;
+}
+#list-container{
+    max-height:200px;
+    overflow:auto;
+}
+.strike{
+    text-decoration: line-through;
+}
