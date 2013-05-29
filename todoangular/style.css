@@ -1,13 +1,21 @@
-body{
+body {
     padding:20px;
 }
-.todolist span{
+
+.todolist span {
     color:#777;
 }
-#list-container{
+
+.todolist {
+    margin-bottom:0px;
+}
+
+#list-container {
     max-height:200px;
     overflow:auto;
+    margin-bottom:20px;
 }
-.strike{
+
+.strike {
     text-decoration: line-through;
 }
