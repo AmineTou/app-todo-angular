@@ -1,4 +1,4 @@
-var TodoApp = angular.module("TodoApp", ["ngResource"]).
+var TodoApp = angular.module("TodoApp", ["ngResource", "ngRoute"]).
     config(function ($routeProvider) {
         "use strict";
         $routeProvider.when('/', { controller: TodoCtrl, templateUrl: 'index.html' });
